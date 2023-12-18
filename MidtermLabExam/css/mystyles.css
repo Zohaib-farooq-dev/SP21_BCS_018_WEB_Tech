@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    display : flex ;
+    flex-direction: column;
+    position: sticky;
+    top : 0;
+}
+#top{
+    flex: 30%;
+    background-color: green;
+    display :flex;
+   border-top: 1px solid white;
+   border-bottom: 1px solid white ;
+   color:white;
+}
+#menu{
+    display: flex;
+    background-color: darkgreen;
+    border-bottom: 1px solid white ;
+    color:white;
+}
+#logo{
+    padding: 20px;
+    flex: 5%;
+    display: flex;
+}
+#news{
+    padding: 10px;
+    display: flex;
+}
+#top p{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+#headlines{
+    display:flex;
+    padding: 10px;
+    flex: 60%;
+}
+#jobportal{
+    display: flex;
+    padding: 10px;
+}
+#english{
+    display: flex;
+    padding: 10px;
+}
+#urdu{
+    display: flex;
+    padding: 10px;
+}
+.dropdown{
+   padding: 20px;
+}
+.dropdown select{
+    background-color: transparent;
+    border: none;
+}
+.dropdown option{
+    border-bottom: 1px solid white;
+    background-color: darkgreen;
+}
+#logo button{
+    margin-left: 5px;
+    background-color:darkgreen;
+    /* border: none;  */
+}
+#topcontent{
+   height: 100vh;
+   width:  100%;
+}
+#topcontent::before{
+    background-image: url('court.JPG');
+    position: relative;
+    top: 0;
+    opacity: 0.3;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}

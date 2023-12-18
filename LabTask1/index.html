@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="./validation.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="signUp">
+            <div class="p">
+                <p><em><strong>Sign Up Form</strong></em></p>
+            </div>
+
+            <div>
+                <form class="form">
+                    <div>
+                        <label for="name">Name</label>
+                        <br>
+                        <input type="text" name="name" placeholder="Full Name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <br>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="password">Confirm Password</label>
+                        <br>
+                        <input type="password" name="confirmpassword" placeholder=" Confirm Password">
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="agree_to_terms" value="yes">
+                        <label for="checkbox"><strong>I agree to terms and conditions</strong></label>
+
+                    </div>
+
+                    <div >
+                        <button type="submit" id="btn">Submit</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
