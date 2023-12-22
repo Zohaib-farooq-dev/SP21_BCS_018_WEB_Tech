@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Form Section -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form action="/calculate" method="POST" class="mb-4">
+          <div class="form-group">
+            <input type="text" class="form-control" name="operand1" placeholder="Operand 1" required>
+          </div>
+          <div class="form-group">
+            <select class="form-control" name="operator">
+              <option value="+" selected>+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="operand2" placeholder="Operand 2" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Result Table Section -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2>Results</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Operand 1</th>
+              <th>Operator</th>
+              <th>Operand 2</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(results && results.length > 0) { %>
+              <% results.forEach(result => { %>
+                <tr>
+                  <td><%= result.operand1 %></td>
+                  <td><%= result.operator %></td>
+                  <td><%= result.operand2 %></td>
+                  <td><%= result.result %></td>
+                </tr>
+              <% }); %>
+            <% } else { %>
+              <tr>
+                <td colspan="4" class="text-center">No results found</td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Include Bootstrap JS or your custom JS here -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+</body>
+</html>
